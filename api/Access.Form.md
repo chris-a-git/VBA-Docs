@@ -97,7 +97,7 @@ Private Sub cmdSearch_Click()
       MsgBox "There are no search criteria selected." & vbCrLf & vbCrLf & _
              "Search Cancelled.", vbInformation, "Search Canceled."
    Else
-      Set qd = db.CreateQueryDef("Query1", "SELECT * FROM tblRefundData? & _
+      Set qd = db.CreateQueryDef("Query1", "SELECT * FROM tblRefundData?" & _
                " WHERE " & Mid(vWhere, 6))
       db.Close
       Set db = Nothing
